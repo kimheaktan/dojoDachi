@@ -1,0 +1,32 @@
+@model Dachi
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Play again?</h1>
+    @* <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+</div>
+
+<div class="text-center">
+    <div>Fullness: @Model.Fullness  </div> 
+    <div>Happiness: @Model.Happiness</div>
+    <div>Meals:@Model.Meals </div>
+    <div>Energy: @Model.Energy</div> 
+</div>
+
+<div class="border border-primary" style="margin: 0 130px 0 130px">
+    <p class="text-center">reaction</p>
+
+    <div class="d-flex justify-content-around" style="margin: 0 130px 0 130px">
+        <img class="text-center" src="~/images/happy.jpeg" alt="">
+    </div>
+    <p class="text-center">@ViewBag.message</p>
+
+</div>
+
+<div class="d-flex justify-content-around mt-4">
+    <partial name="RestartPartial">
+</div>
+
+
